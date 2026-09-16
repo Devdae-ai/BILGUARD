@@ -1,0 +1,75 @@
+:root {
+  --ink: #10141f;
+  --panel: #171c29;
+  --paper: #efebe1;
+  --muted: #8b93a7;
+  --line: #2b3245;
+  --signal: #e3a23c;
+  --leak: #c1594a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono-data { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; }
+.rule { border-color: var(--line); }
+
+.ledger-row { border-bottom: 1px solid var(--line); }
+.ledger-row:first-child { border-top: 1px solid var(--line); }
+
+.amount {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.signal-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.hero-parallax { will-change: transform; }
+
+.receipt-slip {
+  font-family: 'IBM Plex Mono', monospace;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], select {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  color: var(--paper);
+  font-family: 'IBM Plex Mono', monospace;
+}
+input:focus, select:focus, button:focus, a:focus {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+input::placeholder { color: #5c6376; }
+::selection { background: var(--signal); color: var(--ink); }
+
+.btn-signal { background: var(--signal); color: var(--ink); font-family: 'IBM Plex Mono', monospace; }
+.btn-signal:hover { background: #eeb35f; }
+
+.btn-outline { border: 1px solid var(--line); color: var(--paper); font-family: 'IBM Plex Mono', monospace; }
+.btn-outline:hover { border-color: var(--signal); color: var(--signal); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-parallax { transform: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+.avatar-ring { border: 1px solid var(--line); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 0; }
