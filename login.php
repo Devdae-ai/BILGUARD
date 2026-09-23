@@ -1,8 +1,10 @@
-<?php
+?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-redirect_if_logged_in();
 
+require_once __DIR__ . '/includes/auth.php';
+
+redirect_if_logged_in();
 $error = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
