@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 define('DB_HOST', 'sql208.byethost11.com');
 define('DB_NAME', 'b11_42933766_bilguardsdb');
