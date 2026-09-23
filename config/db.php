@@ -1,9 +1,9 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'billguard');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'sql208.byethost11.com');
+define('DB_NAME', 'b11_42933766_bilguardsdb');
+define('DB_USER', 'b11_42933766');
+define('DB_PASS', 'bilguard2000');
 
 function get_pdo(): PDO {
     static $pdo = null;
